@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import { ThemeProvider } from "@mui/material/styles";
+import { ApolloProvider } from "@apollo/client";
+
+// GraphQl
+import { client } from "./client";
+
+//Theme
+import { theme } from "./theme/theme";
+
+//Screens
+import UserSearchScreen from "./screens/UsersSearch/UsersSearch";
+import RepositoriesSearchScreen from "./screens/RepositoriesSearch/RepositoriesSearch";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ApolloProvider client={client}>
+      <ThemeProvider theme={theme}>
+        <div className="App">
+          <Routes>
+            <Route path="/*">
+              <Route index element={<UserSearchScreen />} />
+              <Route
+                path="repositories"
+                element={<RepositoriesSearchScreen />}
+              />
+            </Route>
+          </Routes>
+        </div>
+      </ThemeProvider>
+    </ApolloProvider>
   );
 }
 
