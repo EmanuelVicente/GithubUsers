@@ -19,15 +19,14 @@ function App() {
     <ApolloProvider client={client}>
       <ThemeProvider theme={theme}>
         <div className="App">
-          {
-            <Routes>
-              <Route path="/" element={<UserSearchScreen />} />
-              <Route
-                path="repositories"
-                element={<RepositoriesSearchScreen />}
-              />
-            </Routes>
-          }
+          <Routes>
+            <Route path="/" element={<UserSearchScreen />} />
+            <Route path="/users" element={<UserSearchScreen />} />
+            <Route
+              path="/repositories"
+              element={<RepositoriesSearchScreen />}
+            />
+          </Routes>
         </div>
       </ThemeProvider>
     </ApolloProvider>

@@ -44,7 +44,7 @@ const SearchBar = ({ className, onChangeSearch }: SearchBarProps) => {
     return (
       media != "mobile" && (
         <RightContainer>
-          <NavLinkStyled to="/">
+          <NavLinkStyled to="/users">
             <span>{"Users"}</span>
           </NavLinkStyled>
           <NavLinkStyled to="/repositories">

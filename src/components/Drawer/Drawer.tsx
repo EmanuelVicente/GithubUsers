@@ -17,7 +17,7 @@ const Drawer = ({ open, close }: DrawerProps) => {
         <IconContainer>
           <CloseIcon onClick={close} fontSize={"small"} />
         </IconContainer>
-        <NavLinkStyled to="/">
+        <NavLinkStyled to="/users">
           <span>{"Users"}</span>
         </NavLinkStyled>
         <NavLinkStyled to="/repositories">
