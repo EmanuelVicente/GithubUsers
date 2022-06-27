@@ -69,6 +69,5 @@
   },
   "lint": "eslint .",
   "lint:fix": "eslint --fix",
-  "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-  "homepage": "https://emanuelvicente.github.io/GithubUsers/"
+  "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
 }
