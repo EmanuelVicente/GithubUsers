@@ -8,7 +8,7 @@ const httpLink = createHttpLink({
 const authLink = setContext((_, { headers }) => ({
   headers: {
     ...headers,
-    authorization: "Bearer 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",
+    authorization: "Bearer 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",
   },
 }));
 
